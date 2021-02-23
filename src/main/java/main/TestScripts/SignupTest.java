@@ -43,8 +43,9 @@ public class SignupTest {
 
         String captchaVal = JOptionPane.showInputDialog("Please solve this puzzle so we know you're a real perso");
         //Type the entered captcha to the text box
-        driver.findElement(By.xpath("//input[@class='a-input-text a-span12 cvf-widget-input cvf-widget-input-code cvf-widget-input-captcha fwcim-captcha-guess']")).sendKeys(captchaVal);
-        driver.findElement(By.xpath("//input[@class='a-button-input']")).click();
+        homePage.inputCaptcha.sendKeys(captchaVal);
+        homePage.btnCaptcha.click();
+        System.out.println("Account Created Successfully!");
 
         driver.close();
 
