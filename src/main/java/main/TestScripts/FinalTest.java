@@ -10,12 +10,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import javax.swing.*;
 import java.io.IOException;
 
 public class FinalTest {
 
 
-    public static void main(String arg[]) throws IOException {
+    public static void main(String arg[]) throws IOException, InterruptedException {
         WebDriverManager.chromedriver().setup();
         WebDriver driver=new ChromeDriver();
         LoginPage loginPage =  PageFactory.initElements(driver, LoginPage.class);
@@ -34,7 +35,9 @@ public class FinalTest {
         signupPage.inputSingUpEmail.sendKeys(email);
         signupPage.inputSignUpPassword.sendKeys(password);
         homePage.btnSignInSubmit.click();
+        
 
+        Thread.sleep(5000);
         signupPage.btnDropdown.click();
         driver.navigate().to("https://www.imdb.com/chart/top/?ref_=nv_mv_250");
 
