@@ -10,6 +10,7 @@ public class FileLib {
         FileInputStream fis = new FileInputStream("src/main/resources/data.properties");
         Properties properties = new Properties();
         properties.load(fis);
+  //      properties.load(fis);
         return properties;
     }
 }
