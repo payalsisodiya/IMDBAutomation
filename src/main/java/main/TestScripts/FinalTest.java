@@ -47,6 +47,7 @@ public class FinalTest {
 
         String pageText = homePage.dateData.getText();
         System.out.println(pageText);
+        System.out.println(pageText);
         driver.close();
     }
 
